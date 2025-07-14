@@ -4,5 +4,3 @@ git checkout -b delete-file-branch
 git rm path/to/file
 git commit -m "Delete file"
 git push origin delete-file-branch
-
-
