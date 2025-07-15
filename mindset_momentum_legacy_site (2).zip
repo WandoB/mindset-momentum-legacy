@@ -1,6 +1,933 @@
-git clone https://github.com/username/repo.git
-cd repo
-git checkout -b delete-file-branch
-git rm path/to/file
-git commit -m "Delete file"
-git push origin delete-file-branch
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mindset Momentum Legacy</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #0d0d0d;
+      color: #ffffff;
+      font-family: 'Helvetica Neue', sans-serif;
+      height: 100vh;
+      background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?fit=crop&w=1920&q=80');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0, 0, 0, 0.75);
+      z-index: 1;
+    }
+
+    .container {
+      position: relative;
+      z-index: 2;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 24px;
+      color: #ff6600;
+      display: flex;
+      align-items: center;
+    }
+
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      margin-left: 30px;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ff6600;
+    }
+
+    .hero {
+      margin-top: 80px;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #cccccc;
+      max-width: 600px;
+      margin-bottom: 40px;
+    }
+
+    .btn {
+      background-color: #ff6600;
+      color: #000;
+      padding: 14px 30px;
+      border: none;
+      font-weight: bold;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      background-color: #e65c00;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 36px;
+      }
+
+      nav a {
+        margin-left: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay"></div>
+  <div class="container">
+    <header>
+      <div class="logo">▲ MML</div>
+      <nav>
+        <a href="#">About</a>
+        <a href="#">Momentum</a>
+        <a href="#">Coaching</a>
+        <a href="#">Contact</a>
+      </nav>
+    </header>
+    <div class="hero">
+      <h1>FUEL YOUR MIND.<br>FIND YOUR MOMENTUM.<br>LIVE YOUR LEGACY.</h1>
+      <p>Empowering you to rise above circumstances and become the author of your story.</p>
+      <a class="btn" href="#">START YOUR JOURNEY</a>
+    </div>
+  </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Momentum</title>
+  
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+
+  <style>
+    body {
+      background-color: #0d0d0d;
+      color: #ffffff;
+      font-family: 'Helvetica Neue', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #000;
+      padding: 30px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 40px;
+    }
+
+    nav a {
+      color: #fff;
+      margin-left: 30px;
+      text-decoration: none;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ff6600;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 60px 20px;
+    }
+
+    h1 {
+      font-size: 36px;
+      color: #ff6600;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 24px;
+      color: #ffffff;
+      margin-top: 40px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 18px;
+      color: #dddddd;
+      line-height: 1.6;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    input, textarea {
+      background-color: #1a1a1a;
+      border: 1px solid #333;
+      padding: 15px;
+      font-size: 16px;
+      border-radius: 5px;
+      color: #ffffff;
+    }
+
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: #ff6600;
+    }
+
+    button {
+      background-color: #ff6600;
+      border: none;
+      padding: 14px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #000;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #e65c00;
+    }
+
+    .coming-soon {
+      margin-top: 30px;
+      font-size: 18px;
+      color: #ff6600;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  
+<header>
+  <div class="logo">
+    <a href="index.html">
+      <img src="images/mml-logo.png" alt="Mindset Momentum Legacy Logo" style="height: 40px;">
+    </a>
+  </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="momentum.html">Momentum</a>
+    <a href="coaching.html">Coaching</a>
+    <a href="contact.html">Contact</a>
+    <a href="merch.html">Merch</a>
+  </nav>
+</header>
+
+  <div class="container">
+    
+<h1>Momentum Starts Here</h1>
+<p>Explore the power of daily growth. Each day carries a mindset that moves you forward.</p>
+<div>
+  <h2>Mindset Monday</h2><p>Set your mental tone for the week. Focus, clarity, intention.</p>
+  <h2>Truth Talk Tuesday</h2><p>Face your truths. Own your story. Real talk creates real change.</p>
+  <h2>Wisdom Wednesday</h2><p>Learn from yesterday. Apply it today. Grow into tomorrow.</p>
+  <h2>Transformation Thursday</h2><p>Change isn't a switch—it’s momentum. Choose your direction.</p>
+  <h2>Fearless Friday</h2><p>Be bold. Make moves. Show up for your future with confidence.</p>
+  <h2>Self-Belief Saturday</h2><p>You’ve got this. Trust your path and your power.</p>
+  <h2>Soul Work Sunday</h2><p>Reset and reflect. Realign with your purpose and rest with pride.</p>
+</div>
+
+  </div>
+  
+<footer style="background-color:#000; text-align:center; padding:30px 10px; margin-top:60px;">
+  <p style="color:#fff; font-size:16px; margin-bottom:10px;">Follow Mindset Momentum Legacy:</p>
+  <a href="https://www.instagram.com/mindsetmomentumlegacy?igsh=b3Y3ZXZlMTJyazBy&utm_source=qr" 
+     target="_blank" 
+     style="color:#ff6600; font-size:16px; text-decoration: none;">
+    Instagram
+  </a>
+</footer>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact</title>
+  
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+
+  <style>
+    body {
+      background-color: #0d0d0d;
+      color: #ffffff;
+      font-family: 'Helvetica Neue', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #000;
+      padding: 30px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 40px;
+    }
+
+    nav a {
+      color: #fff;
+      margin-left: 30px;
+      text-decoration: none;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ff6600;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 60px 20px;
+    }
+
+    h1 {
+      font-size: 36px;
+      color: #ff6600;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 24px;
+      color: #ffffff;
+      margin-top: 40px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 18px;
+      color: #dddddd;
+      line-height: 1.6;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    input, textarea {
+      background-color: #1a1a1a;
+      border: 1px solid #333;
+      padding: 15px;
+      font-size: 16px;
+      border-radius: 5px;
+      color: #ffffff;
+    }
+
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: #ff6600;
+    }
+
+    button {
+      background-color: #ff6600;
+      border: none;
+      padding: 14px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #000;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #e65c00;
+    }
+
+    .coming-soon {
+      margin-top: 30px;
+      font-size: 18px;
+      color: #ff6600;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  
+<header>
+  <div class="logo">
+    <a href="index.html">
+      <img src="images/mml-logo.png" alt="Mindset Momentum Legacy Logo" style="height: 40px;">
+    </a>
+  </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="momentum.html">Momentum</a>
+    <a href="coaching.html">Coaching</a>
+    <a href="contact.html">Contact</a>
+    <a href="merch.html">Merch</a>
+  </nav>
+</header>
+
+  <div class="container">
+    
+<h1>Let’s Connect</h1>
+<p>Have questions, ideas, or just want to share your story? Reach out — I’d love to hear from you.</p>
+<form name="contact" method="POST" data-netlify="true">
+  <input type="text" name="name" placeholder="Your Name" required />
+  <input type="email" name="email" placeholder="Your Email" required />
+  <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+  <button type="submit">Send Message</button>
+</form>
+
+  </div>
+  
+<footer style="background-color:#000; text-align:center; padding:30px 10px; margin-top:60px;">
+  <p style="color:#fff; font-size:16px; margin-bottom:10px;">Follow Mindset Momentum Legacy:</p>
+  <a href="https://www.instagram.com/mindsetmomentumlegacy?igsh=b3Y3ZXZlMTJyazBy&utm_source=qr" 
+     target="_blank" 
+     style="color:#ff6600; font-size:16px; text-decoration: none;">
+    Instagram
+  </a>
+</footer>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About</title>
+  
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+
+  <style>
+    body {
+      background-color: #0d0d0d;
+      color: #ffffff;
+      font-family: 'Helvetica Neue', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #000;
+      padding: 30px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 40px;
+    }
+
+    nav a {
+      color: #fff;
+      margin-left: 30px;
+      text-decoration: none;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ff6600;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 60px 20px;
+    }
+
+    h1 {
+      font-size: 36px;
+      color: #ff6600;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 24px;
+      color: #ffffff;
+      margin-top: 40px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 18px;
+      color: #dddddd;
+      line-height: 1.6;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    input, textarea {
+      background-color: #1a1a1a;
+      border: 1px solid #333;
+      padding: 15px;
+      font-size: 16px;
+      border-radius: 5px;
+      color: #ffffff;
+    }
+
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: #ff6600;
+    }
+
+    button {
+      background-color: #ff6600;
+      border: none;
+      padding: 14px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #000;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #e65c00;
+    }
+
+    .coming-soon {
+      margin-top: 30px;
+      font-size: 18px;
+      color: #ff6600;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  
+<header>
+  <div class="logo">
+    <a href="index.html">
+      <img src="images/mml-logo.png" alt="Mindset Momentum Legacy Logo" style="height: 40px;">
+    </a>
+  </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="momentum.html">Momentum</a>
+    <a href="coaching.html">Coaching</a>
+    <a href="contact.html">Contact</a>
+    <a href="merch.html">Merch</a>
+  </nav>
+</header>
+
+  <div class="container">
+    
+<h1>About Mindset Momentum Legacy</h1>
+<h2>Mission & Values</h2>
+<p><strong>Mindset Momentum Legacy</strong> is dedicated to empowering individuals and organizations to lead with intention, resilience, and purpose. We believe every person—and every team—has the potential to grow, transform, and lead from a place of strength and self-belief.</p>
+<p>Our mission is rooted in <strong>mindset, respect, and human potential</strong>. We serve both individuals seeking change and companies looking to cultivate leadership, team unity, and long-lasting impact.</p>
+<h2>My Story</h2>
+<p>Ten years into my career, I was at the top of my game.</p>
+<p>Then came a turning point—an opportunity I had invested in deeply didn’t unfold the way I expected. Instead of breaking me, it became a moment of growth and redirection. It helped me reflect on my purpose and discover the transformative power of <strong>mindset, self-belief, and resilience</strong>.</p>
+<p>Having led high-performing teams, I’ve always seen the unique value and potential in each person. That realization inspired me to found <strong>Mindset Momentum Legacy</strong>—to help others recognize their worth, unlock their strength, and rise beyond their circumstances.</p>
+
+  </div>
+  
+<footer style="background-color:#000; text-align:center; padding:30px 10px; margin-top:60px;">
+  <p style="color:#fff; font-size:16px; margin-bottom:10px;">Follow Mindset Momentum Legacy:</p>
+  <a href="https://www.instagram.com/mindsetmomentumlegacy?igsh=b3Y3ZXZlMTJyazBy&utm_source=qr" 
+     target="_blank" 
+     style="color:#ff6600; font-size:16px; text-decoration: none;">
+    Instagram
+  </a>
+</footer>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Coaching</title>
+  
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+
+  <style>
+    body {
+      background-color: #0d0d0d;
+      color: #ffffff;
+      font-family: 'Helvetica Neue', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #000;
+      padding: 30px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 40px;
+    }
+
+    nav a {
+      color: #fff;
+      margin-left: 30px;
+      text-decoration: none;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ff6600;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 60px 20px;
+    }
+
+    h1 {
+      font-size: 36px;
+      color: #ff6600;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 24px;
+      color: #ffffff;
+      margin-top: 40px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 18px;
+      color: #dddddd;
+      line-height: 1.6;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    input, textarea {
+      background-color: #1a1a1a;
+      border: 1px solid #333;
+      padding: 15px;
+      font-size: 16px;
+      border-radius: 5px;
+      color: #ffffff;
+    }
+
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: #ff6600;
+    }
+
+    button {
+      background-color: #ff6600;
+      border: none;
+      padding: 14px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #000;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #e65c00;
+    }
+
+    .coming-soon {
+      margin-top: 30px;
+      font-size: 18px;
+      color: #ff6600;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  
+<header>
+  <div class="logo">
+    <a href="index.html">
+      <img src="images/mml-logo.png" alt="Mindset Momentum Legacy Logo" style="height: 40px;">
+    </a>
+  </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="momentum.html">Momentum</a>
+    <a href="coaching.html">Coaching</a>
+    <a href="contact.html">Contact</a>
+    <a href="merch.html">Merch</a>
+  </nav>
+</header>
+
+  <div class="container">
+    
+<h1>Coaching That Moves You Forward</h1>
+<p>Whether you're leading a team or finding your own path, coaching through Mindset Momentum Legacy is built to unlock your strength and momentum.</p>
+<h2>1-on-1 Coaching</h2>
+<p>Personalized coaching for individuals ready to break past barriers, reframe their mindset, and align with their purpose. Each session is tailored to where you are and where you want to go.</p>
+<h2>Group Coaching</h2>
+<p>Small group coaching sessions built on shared growth, peer support, and accountability. Ideal for teams or individuals who thrive in community-driven spaces.</p>
+<h2>Bookings</h2>
+<p class="coming-soon">Booking options coming soon. Stay tuned!</p>
+
+  </div>
+  
+<footer style="background-color:#000; text-align:center; padding:30px 10px; margin-top:60px;">
+  <p style="color:#fff; font-size:16px; margin-bottom:10px;">Follow Mindset Momentum Legacy:</p>
+  <a href="https://www.instagram.com/mindsetmomentumlegacy?igsh=b3Y3ZXZlMTJyazBy&utm_source=qr" 
+     target="_blank" 
+     style="color:#ff6600; font-size:16px; text-decoration: none;">
+    Instagram
+  </a>
+</footer>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Merch</title>
+  
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+
+  <style>
+    body {
+      background-color: #0d0d0d;
+      color: #ffffff;
+      font-family: 'Helvetica Neue', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #000;
+      padding: 30px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 40px;
+    }
+
+    nav a {
+      color: #fff;
+      margin-left: 30px;
+      text-decoration: none;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ff6600;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 60px 20px;
+    }
+
+    h1 {
+      font-size: 36px;
+      color: #ff6600;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 24px;
+      color: #ffffff;
+      margin-top: 40px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 18px;
+      color: #dddddd;
+      line-height: 1.6;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    input, textarea {
+      background-color: #1a1a1a;
+      border: 1px solid #333;
+      padding: 15px;
+      font-size: 16px;
+      border-radius: 5px;
+      color: #ffffff;
+    }
+
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: #ff6600;
+    }
+
+    button {
+      background-color: #ff6600;
+      border: none;
+      padding: 14px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #000;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #e65c00;
+    }
+
+    .coming-soon {
+      margin-top: 30px;
+      font-size: 18px;
+      color: #ff6600;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  
+<header>
+  <div class="logo">
+    <a href="index.html">
+      <img src="images/mml-logo.png" alt="Mindset Momentum Legacy Logo" style="height: 40px;">
+    </a>
+  </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="momentum.html">Momentum</a>
+    <a href="coaching.html">Coaching</a>
+    <a href="contact.html">Contact</a>
+    <a href="merch.html">Merch</a>
+  </nav>
+</header>
+
+  <div class="container">
+    
+<h1>Merch Coming Soon</h1>
+<p>Mindset gear is on the way. Stay tuned for apparel, downloads, and more!</p>
+
+  </div>
+  
+<footer style="background-color:#000; text-align:center; padding:30px 10px; margin-top:60px;">
+  <p style="color:#fff; font-size:16px; margin-bottom:10px;">Follow Mindset Momentum Legacy:</p>
+  <a href="https://www.instagram.com/mindsetmomentumlegacy?igsh=b3Y3ZXZlMTJyazBy&utm_source=qr" 
+     target="_blank" 
+     style="color:#ff6600; font-size:16px; text-decoration: none;">
+    Instagram
+  </a>
+</footer>
+
+</body>
+</html>
